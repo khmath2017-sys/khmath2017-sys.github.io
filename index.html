@@ -19,6 +19,9 @@
             margin: 0;
             padding: 0;
         }
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -32,21 +35,21 @@
             text-align: center;
         }
         header h1 {
-            font-size: 2.4rem;
+            font-size: 2.3rem;
             margin-bottom: 0.5rem;
             letter-spacing: 0.5px;
         }
         header p.subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
+            font-size: 1.15rem;
+            opacity: 0.95;
             margin-bottom: 1.2rem;
         }
         .contact-links {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 1rem;
-            font-size: 0.95rem;
+            gap: 0.8rem;
+            font-size: 0.92rem;
         }
         .contact-links a, .contact-links span {
             color: white;
@@ -61,7 +64,7 @@
         }
         nav {
             background: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.06);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -72,7 +75,7 @@
             flex-wrap: wrap;
             list-style: none;
             padding: 0.8rem;
-            gap: 1.5rem;
+            gap: 1.2rem;
         }
         nav a {
             text-decoration: none;
@@ -95,10 +98,11 @@
             border-radius: 8px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.08);
             border-top: 4px solid var(--secondary);
+            scroll-margin-top: 70px;
         }
         h2 {
             color: var(--primary);
-            font-size: 1.5rem;
+            font-size: 1.45rem;
             margin-bottom: 1.2rem;
             padding-bottom: 0.5rem;
             border-bottom: 1px solid var(--border);
@@ -146,19 +150,31 @@
         }
         .paper-box {
             background: var(--bg-light);
-            padding: 1rem;
-            border-left: 3px solid var(--accent);
+            padding: 1.1rem;
+            border-left: 4px solid var(--accent);
             margin-bottom: 1rem;
             border-radius: 0 6px 6px 0;
         }
         .paper-title {
             font-weight: bold;
             color: var(--primary);
+            margin-bottom: 0.3rem;
         }
         .paper-journal {
             font-style: italic;
             color: var(--text-muted);
             font-size: 0.95rem;
+        }
+        .paper-status {
+            display: inline-block;
+            margin-top: 0.5rem;
+            background: #e6fffa;
+            color: #234e52;
+            border: 1px solid #b2f5ea;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
         }
         footer {
             text-align: center;
@@ -169,7 +185,7 @@
             background: white;
         }
         @media (max-width: 600px) {
-            header h1 { font-size: 1.8rem; }
+            header h1 { font-size: 1.75rem; }
             .item-header { flex-direction: column; }
         }
     </style>
@@ -178,9 +194,10 @@
 
 <header>
     <h1>Dr. Mohammad Khaleel Abu Nawas</h1>
-    <p class="subtitle">Assistant Professor of Mathematics & Mathematical Modeling</p>
+    <p class="subtitle">Associate / Assistant Professor of Physical & Mathematical Sciences</p>
     <div class="contact-links">
-        <span>📍 Amman, Jordan</span>
+        <span>📍 Voronezh, Russia</span>
+        <span>🌐 Dual Citizenship: Russia & Jordan</span>
         <a href="mailto:Khmath2017@gmail.com">✉️ Khmath2017@gmail.com</a>
         <a href="https://orcid.org" target="_blank">🆔 ORCID: 0009-0000-5750-2982</a>
         <a href="https://github.com" target="_blank">💻 GitHub Portfolio</a>
@@ -193,7 +210,7 @@
         <li><a href="#research">Research & Publications</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#education">Education</a></li>
-        <li><a href="#teaching">Teaching</a></li>
+        <li><a href="#teaching">Teaching & Languages</a></li>
         <li><a href="#skills">Computational Skills</a></li>
     </ul>
 </nav>
@@ -202,41 +219,42 @@
 
     <section id="summary">
         <h2>Academic Summary</h2>
-        <p>A highly competent, quality-driven Assistant Professor of Mathematics with over 17 years of academic and leadership experience in higher education institutions. Proven track record in institutional quality assurance, curriculum development aligned with <strong>NCAAA</strong> and <strong>ABET</strong> standards, and the implementation of active learning methodologies. Actively engaged in high-impact research that bridges traditional analytical frameworks with modern computational tools, including <strong>Python (NumPy, SciPy)</strong>, <strong>MATLAB</strong>, and the <strong>Lean 4</strong> formal proof assistant.</p>
+        <p>A highly competent, quality-driven Associate/Assistant Professor of Mathematics (Candidate of Physical and Mathematical Sciences) with over <strong>17 years</strong> of international academic and leadership experience in higher education (since 2006). Proven track record in institutional quality assurance, curriculum adaptation for multilingual and diverse student backgrounds, and alignment with <strong>NCAAA</strong> and <strong>ABET</strong> standards. Actively engaged in high-impact research bridging analytical partial differential equations with modern computational frameworks including <strong>Python (NumPy, SciPy)</strong>, <strong>MATLAB</strong>, and the <strong>Lean 4</strong> formal proof assistant.</p>
     </section>
 
     <section id="research">
-        <h2>Research Interests & Active Pipelines (2024 – 2026)</h2>
+        <h2>Research & Publications (2026)</h2>
+        
         <div class="item">
-            <div class="item-sub">Core Research Areas</div>
-            <div class="badge-container">
-                <span class="badge">Functional Analysis</span>
-                <span class="badge">Evolution Differential Equations</span>
-                <span class="badge">Sobolev / Stepanov Spaces</span>
-                <span class="badge">Formal Computational Mathematics</span>
-                <span class="badge">Finite-Time Blow-Up Detection</span>
-            </div>
-        </div>
-
-        <div class="item" style="margin-top: 1.5rem;">
-            <div class="item-sub">Recent Analytical & Computational Progress</div>
-            <ul class="clean-list">
-                <li>Reviewed complex kernel-type systems for blow-up solutions in nonlinear mathematical physics (SLS systems and Vlasov-Poisson models).</li>
-                <li>Enhanced computational frameworks using Python PIC algorithms, reducing sensitivity to added Gaussian noise by <strong>35%</strong>.</li>
-                <li>Pioneered the implementation of computer-assisted theorem-proving software through <strong>Lean 4</strong>.</li>
-            </ul>
-        </div>
-
-        <div class="item" style="margin-top: 1.5rem;">
-            <div class="item-sub">Active Manuscripts Under Review (2026)</div>
+            <div class="item-sub">Manuscripts Under Review & Editorial Processing</div>
+            
             <div class="paper-box">
                 <div class="paper-title">"Weighted Stepanov Spaces for Blow-Up Detection in Nonlinear PDEs: Stability, Calibration-Free Asymptotics, and Time-Derivative Variance Analysis"</div>
-                <div class="paper-journal">Under Review in the Journal of Mathematical Analysis and Applications (JMAA) - Elsevier (Manuscript No: JMAA-26-3707)</div>
+                <div class="paper-journal">Journal of Mathematical Analysis and Applications (JMAA) — Elsevier | Manuscript No: JMAA-26-3707</div>
+                <div class="paper-status">Status: Required Reviews Completed (Submitted: Aug 27, 2026 | Updated: Nov 02, 2026)</div>
             </div>
+
             <div class="paper-box">
                 <div class="paper-title">"A Causal Weighted Stepanov Norm for Early Warning of Finite-Time Blow-Up"</div>
-                <div class="paper-journal">New Submission in The Journal of Analysis (JANA) - Springer (Manuscript No: JANA-D-26-00923)</div>
+                <div class="paper-journal">The Journal of Analysis (JANA) — Springer | Manuscript No: JANA-D-26-00923</div>
+                <div class="paper-status">Status: Under Editorial Review (2026)</div>
             </div>
+        </div>
+
+        <div class="item" style="margin-top: 1.5rem;">
+            <div class="item-sub">Core Research Interests & Computational Milestones</div>
+            <div class="badge-container" style="margin-bottom: 1rem;">
+                <span class="badge">Differential Equations & Dynamical Systems</span>
+                <span class="badge">Functional Analysis</span>
+                <span class="badge">Sobolev & Stepanov Spaces</span>
+                <span class="badge">Finite-Time Blow-Up Detection</span>
+                <span class="badge">Formal Theorem Proving (Lean 4)</span>
+            </div>
+            <ul class="clean-list">
+                <li>Investigated complex kernel-type systems for blow-up solutions in nonlinear mathematical physics (SLS systems and Vlasov-Poisson models).</li>
+                <li>Enhanced computational frameworks using Python PIC algorithms, reducing sensitivity to added Gaussian noise by <strong>35%</strong>.</li>
+                <li>Pioneered the formalization of analytical proofs using computer-assisted theorem-proving software (<strong>Lean 4</strong>).</li>
+            </ul>
         </div>
     </section>
 
@@ -244,12 +262,8 @@
         <h2>Academic & Administrative Experience</h2>
         <div class="item">
             <div class="item-header">
-                <span>Northern Border University (NBU), Arar, Kingdom of Saudi Arabia</span>
-                <span>2006 – 2023</span>
+                <span>Northern Border University (NBU), Kingdom of Saudi Arabia</span>
+                <span>2014 – 2023</span>
             </div>
-            <div class="item-sub">Assistant Professor of Mathematics</div>
+            <div class="item-sub">Vice Dean for Academic Affairs & Head of Computer Science Department</div>
             <ul class="clean-list">
-                <li><strong>Vice Dean of the College for Academic Affairs:</strong> Managed academic operations, ensured fair student admissions, and standardized learning assessments across various scientific departments.</li>
-                <li><strong>Head of the Computer Science Department:</strong> Led the academic team, managed teaching load distributions, and drove curriculum development initiatives.</li>
-                <li><strong>Chair of Quality Assurance Committees:</strong> Led the complete alignment of curricula with NCAAA and ABET standards; reviewed course specifications, annual reports, and course files.</li>
-
